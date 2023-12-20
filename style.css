@@ -284,7 +284,7 @@ span.followers
   border-radius: 6.4px;
 }
 
-.socialList
+.socialList,
 .overviewList
 {
   background-color: var(--light-grayish-blue-card-bg);
