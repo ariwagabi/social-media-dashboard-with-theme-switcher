@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Frontend Mentor | Social Media Dashboard With Theme Switcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JS -->
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+
+  <body id="body">
+
+    <div id="dk-bg" class="topbg-light"></div>
+    <section id="parent-container">
+      <main>
+        <div class="container">
+          <div class="grid-container">
+            <article id="header">
+              <div id="header-wrapper">
+                <div id="social-media">
+                  <div id="social-media-item">
+                    <h1 id="h1">Social Media Dashboard</h1>
+                    <p id="followers" class="light-grey">Total Followers: 23,004</p>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div id="theme-toggler">
+                  <div id="theme-toggler-wrappper">
+                    <div id="dark-mode">
+                      <p class="light-grey">Dark Mode</p>
+                    </div>
+
+                    <!-- Toggler -->
+                    <div onclick="changeTheme()" id="toggler-box">
+                      <div id="toggler-container" class="toggle-bg-white">
+                        <div class="toggler" data-toggle-theme="dark"></div>
+                        <div class="toggler" data-toggle-theme="white"></div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+            </article>
+
+            <article id="social">
+              <div id="social-box-wrapper">
+                <ul id="social-list-container" data-gridbox>
+                  <li id="facebook" data-social-list class="socialList">
+                    <div class="social-items-gridbox">
+                      <div class="brand">
+                        <div class="brand-wrapper">
+                          <div class="brand-logo">
+                            <img src="images/icon-facebook.svg" alt="facebook-logo">
+                          </div>
+                          <div class="brand-id">
+                            <p data-type="username">@nathanf</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="total-followers">
+                        <div class="today-followers-wrapper">
+                          <h2 data-type="total-followers" class="h2">1987</h2>
+                          <span class="followers">FOLLOWERS</span>
+                        </div>
+                      </div>
+                      <div class="today">
+                        <div class="today-wrapper">
+                          <div class="today-item-container">
+                            <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                            <p data-today-color="green" class="today-newfollower-count">12</p>
+                            <p class="dark-grey" class="today-text" data-today-color="green">Today</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li id="twitter" data-social-list class="socialList">
+                    <div class="social-items-gridbox">
+                      <div class="brand">
+                        <div class="brand-wrapper">
+                          <div class="brand-logo">
+                            <img src="images/icon-twitter.svg" alt="twitter-logo">
+                          </div>
+                          <div class="brand-id">
+                            <p data-type="username">@nathanf</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="total-followers">
+                        <div class="today-followers-wrapper">
+                          <h2 data-type="total-followers" class="h2">1044</h2>
+                          <span class="followers">FOLLOWERS</span>
+                        </div>
+                      </div>
+                      <div class="today">
+                        <div class="today-wrapper">
+                          <div class="today-item-container">
+                            <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                            <p data-today-color="green" class="today-newfollower-count">99</p>
+                            <p class="today-text" data-today-color="green">Today</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li id="instagram" data-social-list class="socialList">
+                    <div class="social-items-gridbox">
+                      <div class="brand">
+                        <div class="brand-wrapper">
+                          <div class="brand-logo">
+                            <img src="images/icon-instagram.svg" alt="instagram-logo">
+                          </div>
+                          <div class="brand-id">
+                            <p data-type="username">@realnathanf</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="total-followers">
+                        <div class="today-followers-wrapper">
+                          <h2 data-type="total-followers" class="h2">11k</h2>
+                          <span class="followers">FOLLOWERS</span>
+                        </div>
+                      </div>
+                      <div class="today">
+                        <div class="today-wrapper">
+                          <div class="today-item-container">
+                            <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                            <p data-today-color="green" class="today-newfollower-count">1099</p>
+                            <p class="today-text" data-today-color="green">Today</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li id="youtube" data-social-list class="socialList">
+                    <div class="social-items-gridbox">
+                      <div class="brand">
+                        <div class="brand-wrapper">
+                          <div class="brand-logo">
+                            <img src="images/icon-youtube.svg" alt="youtube-logo">
+                          </div>
+                          <div class="brand-id">
+                            <p data-type="username">Nathan F.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="total-followers">
+                        <div class="today-followers-wrapper">
+                          <h2 data-type="total-followers" class="h2">8239</h2>
+                          <span class="followers">SUBSCRIBERS</span>
+                        </div>
+                      </div>
+                      <div class="today">
+                        <div class="today-wrapper">
+                          <div class="today-item-container">
+                            <img src="images/icon-down.svg" alt="arrow-icon-down" data-arrow-icon="down">
+                            <p class="today-newfollower-count" data-today-color="red">144</p>
+                            <p class="today-text" data-today-color="red">Today</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article id="overview">
+              <div id="overview-box-wrapper">
+                <div id="overview-main-header">
+                  <h3 id="h3">Overview - Today</h3>
+                </div>
+                <div id="overview-list-wrapper">
+                  <ul id="overview-list-container" data-gridbox>
+                    <li id="overview-facebook" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Page Views</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-facebook.svg" alt="facebook-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>87</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                          <p class="overview-rate-percent" data-rate-color="green">3%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-facebook2" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Likes</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-facebook.svg" alt="facebook-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>52</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-down.svg" alt="arrow-icon-down" data-arrow-icon="down">
+                          <p class="overview-rate-percent" data-rate-color="red">2%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-instagram" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Likes</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-instagram.svg" alt="instagram-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>5462</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                          <p class="overview-rate-percent" data-rate-color="green">2257%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-instagram2" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Profile Views</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-instagram.svg" alt="instagram-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>52k</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                          <p class="overview-rate-percent" data-rate-color="green">1375%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-twitter" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Retweets</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-twitter.svg" alt="twitter-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>117</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                          <p class="overview-rate-percent" data-rate-color="green">303%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-twitter2" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Likes</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-twitter.svg" alt="twitter-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>507</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-up.svg" alt="arrow-icon-up" data-arrow-icon="up">
+                          <p class="overview-rate-percent" data-rate-color="green">553%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-youtube" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Likes</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-youtube.svg" alt="youtube-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>107</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-down.svg" alt="arrow-icon-down" data-arrow-icon="down">
+                          <p class="overview-rate-percent" data-rate-color="red">18%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li id="overview-youtube2" data-overview-list class="overviewList">
+                      <div class="overview-list-items">
+                        <div class="overview-header">
+                          <h4>Total Views</h4>
+                        </div>
+                        <div class="overview-brand">
+                          <img src="images/icon-youtube.svg" alt="youtube-logo">
+                        </div>
+                        <div class="view-count">
+                          <h5>1407</h5>
+                        </div>
+                        <div class="rate">
+                          <img src="images/icon-down.svg" alt="arrow-icon-down" data-arrow-icon="down">
+                          <p class="overview-rate-percent" data-rate-color="red">12%</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+
+</html>

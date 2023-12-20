@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@media (min-width: 1440px) {
+  #parent-container {
+    max-width: 1440px !important;
+  }
+
+  #header-wrapper {
+    flex-direction: row !important;
+  }
+
+  hr {
+    display: none;
+  }
+
+  main {
+    position: absolute !important; 
+    width: 100% !important;
+    inset: 1% 0;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  #toggler-box {
+    margin-left: 15px !important;
+  }
+
+  [data-gridbox] {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  #dk-bg {
+    /* position: absolute; */
+    visibility: visible !important;
+    display: block !important;
+    height: 250px;
+    width: 100%;
+    inset: 0;
+  }
+}
