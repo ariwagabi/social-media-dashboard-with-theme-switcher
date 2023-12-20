@@ -281,11 +281,11 @@ span.followers
   display: block;
   padding-top: 2rem;
   padding-bottom: 2rem;
-
   border-radius: 6.4px;
 }
 
 .socialList
+.overviewList
 {
   background-color: var(--light-grayish-blue-card-bg);
 }
